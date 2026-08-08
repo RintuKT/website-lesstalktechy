@@ -351,6 +351,187 @@ h2 {
     box-shadow: 0 10px 30px rgba(0, 240, 255, 0.4);
 }
 
+.btn-buy {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-buy:hover {
+    background: var(--accent-blue);
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Deals & Sale Section */
+.deals-section {
+    padding: 5rem 5%;
+}
+
+.sale-cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.sale-container {
+    text-align: left;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.flipkart-card {
+    border-color: rgba(0, 240, 255, 0.2);
+}
+
+.flipkart-card:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 15px 35px rgba(0, 240, 255, 0.15);
+}
+
+.amazon-card {
+    border-color: rgba(255, 153, 0, 0.2);
+}
+
+.amazon-card:hover {
+    border-color: #ff9900;
+    box-shadow: 0 15px 35px rgba(255, 153, 0, 0.15);
+}
+
+.sale-header {
+    margin-bottom: 2rem;
+}
+
+.sale-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.flipkart-badge {
+    background: rgba(0, 240, 255, 0.15);
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.amazon-badge {
+    background: rgba(255, 153, 0, 0.15);
+    border: 1px solid #ff9900;
+    color: #ff9900;
+}
+
+.sale-banner-wrapper {
+    width: 100%;
+    max-height: 380px;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+}
+
+.sale-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.sale-container:hover .sale-banner-img {
+    transform: scale(1.02);
+}
+
+/* Deal Products Grid */
+.deal-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.deal-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.deal-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateY(-4px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 8px 20px rgba(0, 240, 255, 0.15);
+}
+
+.amazon-card .deal-card:hover {
+    border-color: #ff9900;
+    box-shadow: 0 8px 20px rgba(255, 153, 0, 0.15);
+}
+
+.deal-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: rgba(0, 240, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+    flex-shrink: 0;
+}
+
+.amazon-card .deal-icon {
+    background: rgba(255, 153, 0, 0.1);
+    color: #ff9900;
+}
+
+.deal-info h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+
+.deal-link-text {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.3s;
+}
+
+.deal-card:hover .deal-link-text {
+    color: var(--accent-blue);
+}
+
+.amazon-card .deal-card:hover .deal-link-text {
+    color: #ff9900;
+}
+
 footer {
     text-align: center;
     padding: 2rem;
@@ -376,4 +557,7 @@ footer {
     }
     h1 { font-size: 3rem; }
     h2 { font-size: 2rem; }
+    .sale-container { padding: 1.5rem; }
+    .deal-products-grid { grid-template-columns: 1fr; }
 }
+
